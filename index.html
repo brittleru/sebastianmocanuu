@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  * {
+    transition: all 0.3s ease-in-out;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #main-div {
+    margin-top: 60px;
+  }
+  #welcome-section {
+    background-color: #2F4F4F;
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    font-size: 35px;
+    /* height:34vh; */
+
+  }
+
+  #navbar {
+    top: 0;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background-color: #111;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+
+
+  }
+  #nav-div {
+    float: right;
+    display: inline;
+
+  }
+  #nav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+
+  }
+
+  .nav-list {
+    /* float: left; */
+    display: inline-block
+
+  }
+  .nav-link {
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 25px;
+    color: #818181;
+    text-decoration: none;
+    display: block;
+  }
+  li a {
+    text-align: center;
+  }
+  nav a:hover {
+    color: green;
+    background-color: #111;
+  }
+  nav a:active {
+    color: #4CAF50;
+    background: #9370DB;
+    font-size: 150%;
+  }
+  .link-border {
+    width: 500px;
+    /* height: 700px; */
+    background-color: white;
+
+
+  }
+  #projects {
+    text-align: center;
+    padding-top: 100px;
+    /* padding-bottom: 100px; */
+
+    background-color: #295757;
+    /* border: 2px solid blue; */
+
+  }
+  #projects h1 {
+    font-size: 45px;
+  }
+  .project-tile {
+    font-size: 30px;
+    color: #111;
+
+  }
+  .project-description {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    color: #111;
+
+  }
+  #projects a {
+    text-decoration: none;
+  }
+  #projects .link-border p:hover {
+
+    color: green;
+  }
+  .columns {
+    /* border: 2px solid red; */
+    display: inline-block;
+  }
+  .column1 {
+    /* border: 2px solid red; */
+    float: left;
+    padding: 50px;
+    padding-left: 70px;
+
+  }
+  .column2 {
+    /* border: 2px solid red; */
+    float: left;
+    padding: 50px;
+
+  }
+  .column3 {
+    /* border: 2px solid red; */
+    float: left;
+    padding: 50px;
+
+  }
+  #img-aplicatie {
+    width: 500px;
+    height: 400px;
+    margin-bottom: -10px;
+
+  }
+  #img-fourie {
+    width: 500px;
+    height: 400px;
+    margin-bottom: -10px;
+  }
+  #img-Java {
+    width: 500px;
+    height: 400px;
+    margin-bottom: -10px;
+  }
+  #img-Python {
+    width: 500px;
+    height: 400px;
+    margin-bottom: -10px;
+  }
+  #img-TechPage {
+    width: 500px;
+    height: 400px;
+    margin-bottom: -10px;
+  }
+  #img-Survey {
+    width: 500px;
+    height: 400px;
+    margin-bottom: -10px;
+  }
+  .top-bot {
+    background-color: #2F4F4F;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+  }
+  .top-bot:hover {
+    background-color: #111;
+    color: green;
+  }
+  #projects img:hover {
+    /* opacity: 90%; */
+    border: 1px solid black;
+
+    /* -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); */
+    /* transform: scale(1.1); */
+  }
+  @media only screen and (max width: 480px) {
+    .column1 {
+      text-align: center;
+      padding: 0px;
+    }
+    .column2 {
+      text-align: center;
+      padding: 0px;
+    }
+    .column3 {
+      text-align: center;
+      padding: 0px;
+    }
+  }
+
+  #poli-img {
+    width: 25px;
+    height: 25px;
+  }
+  #Facts {
+    text-align: center;
+    background-color: #295757;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+  }
+  #Contact {
+    background-color: #385151;
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    color: ;
+    font-size: 35px;
+  }
+  #profile-link {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #111;
+
+  }
+  .personal-links {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #111;
+
+  }
+  .contact-list {
+    display: inline-block;
+  }
+  #Contact a:hover {
+    color: green;
+    background-color: #111;
+    /* text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
+  }
+  #Contact a:active {
+    color: #4CAF50;
+    background: #111;
+    border-radius: 50%;
+    font-size: 65%;
+  }
+  #Contact p {
+    margin-top: -30px;
+    font-size: 25px;
+  }
+  #Contact a {
+
+    font-size: 30px;
+  }
+  #footer {
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #111;
+    color: #818181;
+    overflow: hidden;
+    font-style: italic;
+    /* border-top: 5px solid #008080; */
+  }
+  #left {
+    padding-left: 30px;
+    float: left;
+  }
+  #right {
+    padding-right: 30px;
+    float: right;
+
+  }
+  #footer-div {
+
+    background-color: #111;
+  }
+  #photo-me {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    border: 5px solid #008080;
+  }
+  #Facts p {
+    font-size: 25px;
+  }
+  #Facts h1 {
+    font-size: 50px;
+  }
+
+  .span-c {
+    color: white;
+    font-weight: bold;
+  }
+  /* .div-fact {
+    border: 2px solid red;
+    margin-left: 500px;
+    margin-right: 500px;
+  } */
+  #wife-img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    border: 5px solid purple;
+  }
+
+
+
+
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+
+<body>
+
+  <nav id ="navbar">
+    <div id="nav-div">
+      <ul id="nav-ul">
+        <li class="nav-list"><a href="#welcome-section" class="nav-link">Welcome</a></li>
+        <li class="nav-list"><a href="#projects" class="nav-link">Work</a></li>
+        <li class="nav-list"><a href="#Facts" class="nav-link">About</a></li>
+        <li class="nav-list"><a href="#Contact" class="nav-link">Contact</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main-div">
+
+
+    <section id="welcome-section">
+      <h1>Greetings, I am Sebastian Mocanu</h1>
+      <img src="me.jpeg" alt="me" id="photo-me">
+      <h6>< a future Web Developer and a Machine Learning enthusiast /></h6>
+
+    </section >
+
+
+    <section id="projects">
+      <h1>Here are my projects</h1>
+      <div class="columns">
+
+        <div class="column1">
+          <div class="link-border">
+            <a href="#" target="_blank">
+              <div class="top-bot">
+                <p class="project-tile">Fourier Series Aplication</p>
+              </div>
+              <img src="aplicatie.png" alt="aplicatieFourie" id="img-aplicatie">
+              <div class="top-bot">
+                <p class="project-description">I've made an Fourier Series Application in which you can input data about the wave you want and get back diferent types of signals.</p>
+              </div>
+            </a>
+          </div>
+          <br>
+          <div class="link-border">
+            <a href="#" target="_blank">
+              <div class="top-bot">
+                <p class="project-tile">Fourier Components Module</p>
+              </div>
+              <img src="furie.png" alt="Fourie" id="img-fourie">
+              <div class="top-bot">
+                <p class="project-description">I am working for a Fourier Harmonics Components Module in Python in which it adds the waves from a signal to reconstruct it. It works on any type of digital signal.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="column2">
+          <div class="link-border">
+          <a href="#" target="_blank">
+            <div class="top-bot">
+              <p class="project-tile">Java Senzor Data CSV</p>
+            </div>
+              <img src="java senzor.png" alt="Java" id="img-Java">
+            <div class="top-bot">
+              <p class="project-description">I've used Java in order to manipulate data from a senzor in CSV, in order to use it in Python.</p>
+            </div>
+            </a>
+          </div>
+          <br>
+          <div class="link-border">
+            <a href="#" target="_blank">
+              <div class="top-bot">
+                <p class="project-tile">Python Multithread Senzor Data</p>
+              </div>
+              <img src="senzor plot.png" alt="python" id="img-Python">
+              <div class="top-bot">
+                <p class="project-description">I've made a Multithread Python code in which I use data from a Senzor, plot that data, send it to Arduino to use Serial Plot and a TCP/IP connection.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="column3">
+          <div class="link-border">
+            <a href="https://codepen.io/Brittle/pen/yLOYLzo" target="_blank">
+              <div class="top-bot">
+                <p class="project-tile">Computer Vision Technical Page</p>
+              </div>
+              <img src="computerVision.png" alt="CVTech" id="img-TechPage">
+              <div class="top-bot">
+                <p class="project-description">I've written a Technical Page about Computer Vision for a FreeCodeCamp project.</p>
+              </div>
+            </a>
+          </div>
+          <br>
+          <div class="link-border">
+            <a href="https://codepen.io/Brittle/pen/rNxXVLZ" target="_blank">
+              <div class="top-bot">
+                <p class="project-tile">Game Review Survey</p>
+              </div>
+              <img src="survey.png" alt="survey" id="img-Survey">
+              <div class="top-bot">
+
+                <p class="project-description"><br>I've written a Game Review Survey for a FreeCodeCamp project<br>.</p>
+
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+    <section id="Facts">
+
+      <div class="div-fact">
+        <h1>Here are some facts about me</h1>
+        <br><br>
+        <p>I'm a final year student at "Universitatea Politehnica Bucuresti <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/5/51/Logo_Universitatea_Politehnica_din_Bucure%C8%99ti.svg/1200px-Logo_Universitatea_Politehnica_din_Bucure%C8%99ti.svg.png" alt="poli" id="poli-img"> ".</p>
+        <p><span class="span-c">< </span>I study Mechatronics and Robotics but I love to work in Web Development in my free time.<span class="span-c"> /></span> </p>
+        <p>And worked with Refrigeration Systems a short period of time. ❄️</p>
+        <p>I have a loving fiancée named Mogoase Ana-Maria Luisa, there is a photo of her downbelow. 💜</p>
+        <img src="myWife.jpg" alt="wifi" id="wife-img">
+        <p>I like animals. Mostly Cats but I love any animal. 🐾</p>
+        <p>My favourite color is green. 🌲</p>
+        <p>Sometimes I enjoy going to concerts or to some place where is live music. 🎸</p>
+        <p>I used to practice guitar a few years ago. I've had 5 year of experience. 🎸</p>
+      </div>
+    </section>
+
+    <section id="Contact">
+      <h1>Let's work together!</h1>
+      <!-- <p>You can contact me down below</p> -->
+      <br>
+      <ul>
+        <li class="contact-list"><a href="https://github.com/brittleru" target="_blank" id="profile-link"><i class="fa fa-github" aria-hidden="true"> GitHub</i></a></li>
+        <li class="contact-list"><a href="https://www.facebook.com/SSeby14/" target="_blank" class="personal-links"><i class="fa fa-facebook-official" aria-hidden="true"> Facebook</i></a></li>
+        <li class="contact-list"><a href="https://www.linkedin.com/in/mocanu-sebastian-b76a61184/" target="_blank" class="personal-links"><i class="fa fa-linkedin"> LinkedIn</i></a></li>
+        <br>
+        <li class="contact-list"><a href="https://www.freecodecamp.org/brittle" target="_blank" class="personal-links"><i class="fa fa-free-code-camp" aria-hidden="true"> FreeCodeCamp</i></a></li>
+        <li class="contact-list"><a href="mailto:smocanu10@yahoo.com" subject="feedback" target="_blank" class="personal-links"><i class="fa fa-envelope-square" aria-hidden="true"> Send a mail</i></a></li>
+        <li class="contact-list"><a href="tel:+40755883837" target="_blank" class="personal-links"><i class="fa fa-phone" aria-hidden="true"> Call me</i></a></li>
+      </ul>
+
+    </section>
+
+    <div id="footer-div">
+      <footer id="footer">
+        <div id="left">
+          <p>This site was written by me.</p>
+        </div>
+        <div id="right">
+          <p>smocanu10@yahoo.com / +40755883837</p>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
